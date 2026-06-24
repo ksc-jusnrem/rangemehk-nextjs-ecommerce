@@ -16,7 +16,9 @@ export default function Home() {
               The Clay Speaks
             </p>
             <h1 className="mt-6 text-4xl font-semibold leading-snug text-indigo md:text-5xl">
-              Perfume poured into hand-thrown porcelain.
+              <h1 className="mt-6 text-4xl font-semibold leading-snug text-indigo md:text-5xl">
+  Rang-e-Mehk by Ghazal Noor
+</h1> into hand-thrown porcelain.
             </h1>
             <p className="mt-5 max-w-md text-lg leading-relaxed text-indigo/70">
               Rang-e-Mehk is Ghazal Noor&apos;s independent meditation on
