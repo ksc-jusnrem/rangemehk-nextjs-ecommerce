@@ -7,9 +7,11 @@ export interface Product {
   notes: string[];
   volume: string;
   price: number;
+  displayPrice: string;
   color: string;
   accent: string;
   image: string;
+  theoryImage: string;
 }
 
 export const products: Product[] = [
@@ -22,11 +24,12 @@ export const products: Product[] = [
       "A cobalt meditation inspired by Multan's Kashi-kari tilework. Cool mineral facets open into a resinous, devotional heart that lingers like the shade of a tiled shrine at dusk.",
     notes: ["Blue Iris", "Cold Mineral Accord", "Frankincense", "Aged Cedar"],
     volume: "30ml",
-    price: 6500,
+    price: 0,
+    displayPrice: "Contact for Price",
     color: "#003F87",
     accent: "#00A896",
-    image:
-      "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=800&q=80",
+    image: "/kashi-blue.JPG",
+    theoryImage: "/kashi-blue1.jpg",
   },
   {
     id: "noor-e-multan",
@@ -37,11 +40,12 @@ export const products: Product[] = [
       "Sun-drenched and golden, this radiant attar captures the turquoise domes glowing at noon. Warm amber and saffron melt into soft skin musk for an unhurried, luminous trail.",
     notes: ["Saffron", "Amber", "Orange Blossom", "White Musk"],
     volume: "30ml",
-    price: 7200,
+    price: 0,
+    displayPrice: "Contact for Price",
     color: "#00A896",
     accent: "#C85A32",
-    image:
-      "https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=800&q=80",
+    image: "/noor-e-multan.JPG",
+    theoryImage: "/brand1.JPG", 
   },
   {
     id: "wisaal",
@@ -52,11 +56,12 @@ export const products: Product[] = [
       "Wisaal means reunion. Unglazed terracotta, wet earth after rain, and smoked oud form an intimate embrace, grounding the wearer in the raw poetry of mitti.",
     notes: ["Petrichor", "Terracotta Accord", "Smoked Oud", "Vetiver"],
     volume: "30ml",
-    price: 7800,
+    price: 0,
+    displayPrice: "Contact for Price",
     color: "#C85A32",
     accent: "#132238",
-    image:
-      "https://images.unsplash.com/photo-1610461888750-10bfc601b874?auto=format&fit=crop&w=800&q=80",
+    image: "/wisal.JPG",
+    theoryImage: "/wisaal2.jpg",
   },
 ];
 
