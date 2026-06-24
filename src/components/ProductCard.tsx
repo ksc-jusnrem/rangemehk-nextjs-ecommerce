@@ -6,17 +6,28 @@ export default function ProductCard({ product }: { product: Product }) {
 
   return (
     <article className="group flex flex-col overflow-hidden rounded-3xl border border-indigo/10 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl">
+      {/* Image Container with Hover Reveal */}
       <div
         className="relative h-64 w-full overflow-hidden"
         style={{ backgroundColor: product.color }}
       >
+        {/* Main Image */}
         <img
           src={product.image}
           alt={product.name}
-          className="h-full w-full object-cover opacity-90 transition duration-700 group-hover:scale-105"
+          className="absolute inset-0 h-full w-full object-cover opacity-90 transition-opacity duration-700 group-hover:opacity-0"
         />
+        {/* Theory Image (Revealed on hover) */}
+        {product.theoryImage && (
+          <img
+            src={product.theoryImage}
+            alt={`${product.name} Theory`}
+            className="absolute inset-0 h-full w-full object-cover opacity-0 transition-opacity duration-700 group-hover:opacity-90"
+          />
+        )}
+        
         <span
-          className="absolute left-4 top-4 rounded-full px-3 py-1 text-xs uppercase tracking-widest text-white"
+          className="absolute left-4 top-4 z-10 rounded-full px-3 py-1 text-xs uppercase tracking-widest text-white"
           style={{ backgroundColor: product.accent }}
         >
           {product.volume}
@@ -49,8 +60,9 @@ export default function ProductCard({ product }: { product: Product }) {
         </div>
 
         <div className="mt-6 flex items-center justify-between">
+          {/* Updated Price Display */}
           <span className="text-lg font-semibold text-cobalt">
-            PKR {product.price.toLocaleString()}
+            {product.displayPrice}
           </span>
           <button
             onClick={() => addToCart(product)}
