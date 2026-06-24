@@ -43,7 +43,7 @@ export default function Home() {
           </div>
           <div className="relative h-96 overflow-hidden rounded-[2.5rem] bg-cobalt">
             <img
-              src="https://images.unsplash.com/photo-1556228578-8c89e6adf883?auto=format&fit=crop&w=900&q=80"
+              src="hero.JPG"
               alt="Hand-thrown porcelain vessel"
               className="h-full w-full object-cover opacity-90"
             />
