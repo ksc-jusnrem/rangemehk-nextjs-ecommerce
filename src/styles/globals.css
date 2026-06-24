@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --mitti: #C85A32;
+  --cobalt: #003F87;
+  --turquoise: #00A896;
+  --indigo: #132238;
+  --porcelain: #FAF8F5;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background-color: var(--porcelain);
+  color: var(--indigo);
+  font-family: Georgia, 'Times New Roman', serif;
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Custom scrollbar evoking unglazed terracotta */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--porcelain);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--mitti);
+  border-radius: 9999px;
+  border: 2px solid var(--porcelain);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--cobalt);
+}
+
+.nastaliq {
+  font-family: 'Noto Nastaliq Urdu', serif;
+  line-height: 2.2;
+}
+
+.fade-in {
+  animation: fadeIn 0.8s ease-in both;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
